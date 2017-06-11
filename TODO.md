@@ -1,5 +1,5 @@
 # Todos for base package
-  -~~ Config eslint ~~
+  - ~~Config eslint~~
   - Create server
   - Create logger
   - Create db
