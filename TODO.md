@@ -8,6 +8,7 @@
   - ~~Create db~~
   - Create base app tests
     - ~~Utilities~~
+    - ~~Bad url test~~
   - Create hashing function
   - Create model
   - ~~Create db connection~~
