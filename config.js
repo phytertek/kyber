@@ -1,5 +1,7 @@
 export const app = {
-  name: 'Application Name'
+  name: 'Application Name',
+  host: 'http://localhost',
+  port: 8080
 }
 
 export const db = {

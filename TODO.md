@@ -4,6 +4,7 @@
   - ~~Create logger~~
   - ~~Create thinky initialization~~
   - ~~Set up express~~
+  - ~~Start app~~
   - Create db
   - Create model
   - Create db connection
