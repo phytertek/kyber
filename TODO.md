@@ -3,7 +3,7 @@
   - ~~Create config~~
   - ~~Create logger~~
   - ~~Create thinky initialization~~
-  - Create server
+  - ~~Set up express~~
   - Create db
   - Create model
   - Create db connection
