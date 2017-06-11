@@ -1,0 +1,1 @@
+# A base package for future apps
