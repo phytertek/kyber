@@ -9,9 +9,11 @@
   - Create base app tests
     - ~~Utilities~~
     - ~~Bad url test~~
-  - Create hashing function
+    - ~~Hash utilities test~~
+  - ~~Create hashing utilities~~
   - Create model
     - ~~User model~~
   - ~~Create db connection~~
   - Create auth register
   - Create auth login
+  - Fix Config creator
