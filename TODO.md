@@ -1,8 +1,9 @@
 # Todos for base package
   - ~~Config eslint~~
   - ~~Create config~~
-  - Create server
   - ~~Create logger~~
+  - ~~Create thinky initialization~~
+  - Create server
   - Create db
   - Create model
   - Create db connection
