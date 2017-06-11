@@ -11,6 +11,7 @@
     - ~~Bad url test~~
   - Create hashing function
   - Create model
+    - ~~User model~~
   - ~~Create db connection~~
   - Create auth register
   - Create auth login
