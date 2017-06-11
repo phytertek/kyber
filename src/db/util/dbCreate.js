@@ -5,7 +5,7 @@ const exec = require('child_process').exec
 const path = require('path')
 
 // directory for db storage
-const dbPath = path.join(__dirname, '..', '..', 'db')
+const dbPath = path.join(__dirname, '..', '..', '..', 'data')
 
 // docker run command
 const cmd = `docker run -d -p 28015:28015 -p 8090:8080 -v ${dbPath}:/data --name genericdbname rethinkdb`

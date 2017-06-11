@@ -22,3 +22,6 @@ app.use((req, res) => {
   logger.error(message)
   res.status(404).send(message)
 })
+
+// export app
+export default app

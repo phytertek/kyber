@@ -7,5 +7,5 @@ export const app = {
 export const db = {
   host: 'localhost',
   port: 28015,
-  db: `${app.name}DB`
+  db: 'genericdbname'
 }
