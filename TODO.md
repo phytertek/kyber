@@ -5,8 +5,8 @@
   - ~~Create thinky initialization~~
   - ~~Set up express~~
   - ~~Start app~~
-  - Create db
+  - ~~Create db~~
   - Create model
-  - Create db connection
+  - ~~Create db connection~~
   - Create auth register
   - Create auth login
