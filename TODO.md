@@ -7,7 +7,7 @@
   - ~~Start app~~
   - ~~Create db~~
   - Create base app tests
-    -~~Utilities~~
+    --~~Utilities~~
   - Create hashing function
   - Create model
   - ~~Create db connection~~
