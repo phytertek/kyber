@@ -2,7 +2,7 @@
   - ~~Config eslint~~
   - ~~Create config~~
   - Create server
-  - Create logger
+  - ~~Create logger~~
   - Create db
   - Create model
   - Create db connection
