@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "object-curly-spacing":"off",
+    "func-names":"off",
+    "space-before-function-paren": ["error", "never"],
+    "max-len": ["error", 120, 4],
+    "semi":"off",
+    "comma-dangle": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off"
+  }
+}
