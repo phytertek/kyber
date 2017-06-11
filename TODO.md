@@ -6,8 +6,8 @@
   - ~~Set up express~~
   - ~~Start app~~
   - ~~Create db~~
-  - Create base app tests
-    --~~Utilities~~
+  * Create base app tests
+    ..* ~~Utilities~~
   - Create hashing function
   - Create model
   - ~~Create db connection~~
