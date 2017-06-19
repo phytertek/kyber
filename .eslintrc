@@ -8,6 +8,7 @@
     "max-len": ["error", 120, 4],
     "semi":"off",
     "comma-dangle": "off",
+    "no-nested-ternary":"off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off"
   }

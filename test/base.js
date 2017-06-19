@@ -4,7 +4,7 @@
 import {request, should} from './'
 import {app as appConfig} from '../config'
 
-describe('Base Functionality', () => {
+describe('Base', () => {
   describe('GET', () => {
     describe('/#Non Existing Url', () => {
       it('should return a status 404', (done) => {
@@ -12,8 +12,8 @@ describe('Base Functionality', () => {
           err.should.not.be.null
           done()
         })
-      });
-    });
-  });
-});
+      })
+    })
+  })
+})
 

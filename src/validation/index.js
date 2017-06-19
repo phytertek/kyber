@@ -1,0 +1,1 @@
+export {validNewUser} from './newUser'
