@@ -1,5 +1,5 @@
 // our packages
-import {User} from '../db'
+import { User } from '../db'
 
 export const validNewUser = async (user) => {
   const errors = []
@@ -44,8 +44,9 @@ export const validNewUser = async (user) => {
     })
   } else {
     // check if user exists
-    const existingUser = await User.filter({username: user.username}).run()
-                                  .then(existingUsers => existingUsers.length !== 0)
+    const existingUser = await User.filter({ username: user.username })
+      .run()
+      .then(existingUsers => existingUsers.length !== 0)
     if (existingUser) {
       errors.push({
         message: 'This user already exists',

@@ -4,9 +4,10 @@
 
 // our packages
 import { User } from '../db'
+import {asyncReq} from '../util'
 
 export default (app) => {
-  app.post('/api/user/delete', async (req, res) => {
+  app.post('/api/user/delete', asyncReq(async (req, res) => {
     const validFilter = req.body.id
       ? { id: req.body.id }
       : null || req.body.username
@@ -29,5 +30,5 @@ export default (app) => {
     } else {
       res.status(400).send({ error: 'Unable to find user to delete', user })
     }
-  })
+  }))
 }

@@ -41,7 +41,6 @@ describe('Authentication', () => {
         request(host).post(register).send(user).end((err, res) => {
           res.status.should.exist
           res.status.should.equal(201)
-          res.body.username.should.equal(user.username)
           done()
         })
       })
