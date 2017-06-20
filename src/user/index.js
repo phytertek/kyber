@@ -1,6 +1,8 @@
-import baseCRUD from './base'
+import getUser from './get'
+import deleteUser from './delete'
 
 // export User API routes
 export default (app) => {
-  baseCRUD(app)
+  getUser(app)
+  deleteUser(app)
 }

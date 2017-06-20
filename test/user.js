@@ -2,30 +2,45 @@
 
 // our packages
 import {request} from './'
-import {app} from '../config'
+import {app as appConfig} from '../config'
 
 describe('User', () => {
-  const host = app.hostPort
+  const host = appConfig.hostPort
   const tuser = {
-    username: "Test Username"
+    username: "Test Username",
+    password: 'abc123'
   }
-  describe('DELETE', () => {
-    describe('/api/user/delete', () => {
-      it('should return status 200', (done) => {
-        // const user = {...tuser}
-        // request(host).post('/api/user/delete').send(user).end((err, res)=> {
-        //   res.status.should.equal(200)
-        //   done()
-        // })
-        request(host).post('/api/user/delete').send({
-          username: 'Test Username'
+  let user
+  let token
+  
+
+  describe('GET', () => {
+     describe('/api/user/:id',  () => {
+       it('should return a user', (done) => {
+        request(host).post('/api/login').send(tuser).end((err, res) => {
+          user = res.body.user
+          token = res.body.token
+          request(host).get(`/api/user/${user.id}`).set('x-access-token', token).end((error, result) => {
+            result.body.should.not.be.null
+            result.body.username.should.equal(tuser.username)
+            done()
+          })
         })
-        .end((err, res) => {
-          // console.log(err.status, res.body)
-          res.status.should.equal(200)
+      })
+    })
+  })
+  describe('DELETE', () => {
+    describe('/api/user/:id', () => {
+      it('should return status 202', (done) => {
+        request(host).del(`/api/user/${user.id}`).set('x-access-token', token).end((err, res) => {
+          res.status.should.equal(202)
           done()
         })
       });
     });
   });
 })
+
+// afterEach(function (done) {
+//   setTimeout(done, 30);
+// });

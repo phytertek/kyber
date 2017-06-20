@@ -13,5 +13,8 @@ export const db = {
 
 export const auth = {
   passwordSalt: 'O7lcfArrFbBQp9g7VT7KZ0xcqZmCKZJV',
-  sessionSecret: 'kaOxLYDjyOQsJFYO7pxANCP3AQ3z6oSH'
+  sessionSecret: process.env.APP_AUTH_SESSIONSECRET ||
+    '2GcK*"HlB@JY*BQ`(,*_q4`6a,d*}i0fJ^6mmo:P-W{=oTML$`?A2wWAJGfqlemr',
+  jwtSecret: process.env.APP_AUTH_JWTSECRET ||
+    'H#+Q9brQ2!C,VKdtQ<.Hh<+1/-=*n:x=MAAQ;kp0=.=_wTC0>U3@a@nM2&omeWwC'
 }

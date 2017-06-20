@@ -4,18 +4,10 @@ import { User } from '../db'
 export const validNewUser = async (user) => {
   const errors = []
 
-  // check that username is in req.body
-  if (!user.username) {
-    errors.push({
-      message: 'Login requires a Username',
-      log: '/api/register: username not present in request.'
-    })
-  }
-
   // check password is in req.body
   if (!user.password) {
     errors.push({
-      message: 'Login requires a Password.',
+      message: 'Registration requires a password.',
       log: '/api/register: password not present in request.'
     })
   }
@@ -36,11 +28,11 @@ export const validNewUser = async (user) => {
     })
   }
 
-  // check if username included in request
+  // check that username is in req.body
   if (!user.username) {
     errors.push({
-      message: 'Username must not be blank.',
-      log: '/api/register: username not included in request'
+      message: 'Registration requires a username',
+      log: '/api/register: username not present in request.'
     })
   } else {
     // check if user exists

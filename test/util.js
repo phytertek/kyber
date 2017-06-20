@@ -1,5 +1,4 @@
 // our packages
-import {should} from './'
 import {hash, matchHash} from '../src/util'
 
 describe('Utilities', () => {

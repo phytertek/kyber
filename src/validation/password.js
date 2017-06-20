@@ -8,7 +8,12 @@ export const validatePassword = (password, password2) => {
 
 export const validateUserRegister = (user) => {
   let valid = true
-  valid = user.username ? user.password ? user.password2 ? user.password === user.password2 ? true : false : false : false : false
+  valid = user.username
+    ? user.password
+        ? user.password2
+            ? user.password === user.password2
+            : false
+        : false
+    : false
   return valid
-
 }

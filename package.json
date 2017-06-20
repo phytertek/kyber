@@ -9,7 +9,7 @@
     "db:start": "docker start genericdbname",
     "db:stop": "docker stop genericdbname",
     "db:remove": "docker rm genericdbname",
-    "test": "./node_modules/.bin/mocha -c -R list -r babel-register --recursive -w test"
+    "test": "./node_modules/.bin/mocha -c -R nyan -r babel-register --recursive -w test"
   },
   "keywords": [],
   "author": "",
@@ -36,10 +36,16 @@
     "body-parser": "^1.17.2",
     "chai": "^4.0.2",
     "chai-http": "^3.0.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
     "express": "^4.15.3",
+    "express-session": "^1.15.3",
     "jsonwebtoken": "^7.4.1",
     "mocha": "^3.4.2",
     "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
     "thinky": "^2.3.8",
     "validator": "^7.0.0",
     "winston": "^2.3.1"

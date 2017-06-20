@@ -2,9 +2,9 @@
 import crypto from 'crypto'
 
 // our packages
-import {auth as authConfig} from '../../config'
+import { auth as authConfig } from '../../config'
 
-const IV_LENGTH = 16 // For AES, this is always 16  
+const IV_LENGTH = 16 // For AES, this is always 16
 const SALT = authConfig.passwordSalt
 
 export const hash = (str) => {
