@@ -1,5 +1,5 @@
 // our packages
-import { request } from './'
+import { request, authentication, authedUser } from './'
 import app from '../src/app'
 import { app as appConfig } from '../config'
 
@@ -52,6 +52,7 @@ describe('Authentication', () => {
     it('should return a jwt token if successful', (done) => {
       const user = { ...tuser }
       request(host).post(login).send(user).end((err, res) => {
+        authedUser(res.body)
         res.status.should.equal(200)
         res.body.token.should.not.be.null
         done()
