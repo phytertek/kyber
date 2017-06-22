@@ -1,1 +1,1 @@
-export {validNewUser} from './user'
+export { validNewUser, usernameTaken } from './user'

@@ -29,6 +29,32 @@ describe('User', () => {
       })
     })
   })
+
+  describe('POST',  () => {
+    describe('/api/user/:id', () => {
+      it('should require a password2 confirmation to change the password', () => {
+        request(host).post(`/api/user/${user.id}`).set('x-access-token', token)
+        .send({
+          username: 'Test Username',
+          password: 'Nothesamepassword'
+        })
+        .end((err, res) => {
+          err.status.should.equal(400)
+          err.response.body.error.should.equal('Passwords do not match!')
+        })
+      });
+      it('should return user with updated fields', () => {
+        request(host).post(`/api/user/${user.id}`).set('x-access-token', token)
+        .send({
+          username: 'Usernamechanged'
+        })
+        .end((err, res) => {
+          res.status.should.equal(200)
+          res.body.username.should.equal('Usernamechanged')
+        })
+      });
+    })
+  })
   describe('DELETE', () => {
     describe('/api/user/:id', () => {
       it('should return status 202', (done) => {
